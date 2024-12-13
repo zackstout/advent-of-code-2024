@@ -5,6 +5,9 @@ const partOne = () => {
   const test2 = "2333133121414131402";
 
   const parsed = data.split("").map(Number);
+
+  // Woof lol, this was a pretty silly mistake, to not immediately realize that ids will get longer than single digit..
+
   //   let res = "";
   //   let id = 0;
   //   let totalSpace = 0;
@@ -115,12 +118,83 @@ const partOne = () => {
   return { files, spacesCopy, totalSpace, hardDrive, checksum };
 };
 
-const partTwo = () => {};
+const partTwo = () => {
+  // Idea: when parsing, keep track of index of each group (where it starts, and its size), and keep index of each gap (where it starts and its size)
+  // Then we go through all chunks, in descending order, and look for first index with large enough gap, if one exists.
+  // Tricky part is we need to update gaps as we do that.
+  // Then at the end to build up the result we can iterate through while decreasing each chunk's size, in order of their indexes.
+
+  const test = "2333133121414131402";
+
+  function parse(str) {
+    let idx = 0;
+    let id = 0;
+    const blanks = [];
+    const files = {};
+    for (let i = 0; i < str.length; i++) {
+      const n = Number(str[i]);
+      const isWriting = i % 2 === 0;
+      if (isWriting) {
+        files[id] = {
+          size: n,
+          start: idx,
+          id,
+        };
+
+        id++;
+      } else {
+        blanks.push({ start: idx, size: n });
+      }
+      idx += n;
+    }
+    return { blanks, files, id: id - 1 };
+  }
+
+  const { blanks, files, id } = parse(data);
+
+  let currId = id;
+  while (currId >= 0) {
+    // Oooh duh, we should NOT move it if the index is further right than ours!
+    const firstAvailableGap = blanks.find((b) => b.size >= files[currId].size);
+    if (firstAvailableGap && firstAvailableGap.start < files[currId].start) {
+      // Move it there!
+      files[currId].start = firstAvailableGap.start;
+      firstAvailableGap.size -= files[currId].size;
+      firstAvailableGap.start += files[currId].size;
+
+      //   if (currId === 1) {
+      //     console.log(files[currId].start, files[currId].size);
+      //   }
+    }
+
+    currId--;
+  }
+
+  const res = Object.values(files).sort((a, b) => a.start - b.start);
+
+  let total = 0;
+  while (res.length > 0) {
+    const next = res.shift();
+    for (let i = next.start; i < next.start + next.size; i++) {
+      total += i * next.id;
+    }
+  }
+
+  return {
+    total,
+    files: Object.values(files).sort((a, b) => a.start - b.start),
+  };
+};
 
 // Hmm... 5239966795 is too low....
 // Wait a second.... yeah our ids are going to be more than single digit.... huh....
 
 // Shoot, 4202827154936 is too low as well.... and it took 23 seconds.... hmm..
+// ah the blank 0 gaps were the issue.
+
+// for part two, 8607263107036 is too high... not sure where we went wrong...
+// Ahhh duh we don't move them to the RIGHT ever!
+
 console.time("solution");
-console.log("Result: ", partOne());
+console.log("Result: ", partTwo());
 console.timeEnd("solution");
