@@ -47,6 +47,7 @@ const partOne = () => {
     }
 
     if (obstacles.has(nextPos)) {
+      // Turn that guard!
       guard.dir = DIRS.concat(DIRS)[DIRS.indexOf(dir) + 1];
     } else {
       guard.x = nextX;
