@@ -74,21 +74,23 @@ const partTwo = () => {
   for (let i = 1; i < grid.length - 1; i++) {
     for (let j = 1; j < grid[0].length - 1; j++) {
       if (grid[i][j] !== "A") continue;
-      const n = grid[i - 1][j];
-      const s = grid[i + 1][j];
-      const e = grid[i][j + 1];
-      const w = grid[i][j - 1];
+      //   const n = grid[i - 1][j];
+      //   const s = grid[i + 1][j];
+      //   const e = grid[i][j + 1];
+      //   const w = grid[i][j - 1];
       const ne = grid[i - 1][j + 1];
       const nw = grid[i - 1][j - 1];
       const se = grid[i + 1][j + 1];
       const sw = grid[i + 1][j - 1];
-      if (
-        (n + s === "MS" || n + s === "SM") &&
-        (e + w === "MS" || e + w === "SM")
-      ) {
-        total++;
-        // continue;
-      }
+
+      // Ooooh wow, duh, this is "+", not "X"!!!!
+      //   if (
+      //     (n + s === "MS" || n + s === "SM") &&
+      //     (e + w === "MS" || e + w === "SM")
+      //   ) {
+      //     total++;
+      //     // continue;
+      //   }
       if (
         (ne + sw === "MS" || ne + sw === "SM") &&
         (nw + se === "MS" || nw + se === "SM")

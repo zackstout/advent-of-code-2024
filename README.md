@@ -22,13 +22,14 @@
 
 - Word search in grid
 - [x]
-- [ ]
+- [x]
 
 ## --- Day 5: Print Queue ---
 
 - Ensure lists are in proper order
+- Used topological sort for part two
 - [x]
-- [ ]
+- [x]
 
 ## --- Day 6: Guard Gallivant ---
 
@@ -89,4 +90,4 @@
 
 - Box-pushing simulation!
 - [x]
-- [ ]
+- [x]
