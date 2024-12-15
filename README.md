@@ -22,11 +22,13 @@
 
 - Word search in grid
 - [x]
+- [ ]
 
 ## --- Day 5: Print Queue ---
 
 - Ensure lists are in proper order
 - [x]
+- [ ]
 
 ## --- Day 6: Guard Gallivant ---
 
@@ -69,9 +71,22 @@
 
 - Find areas and perimeters of regions
 - [x]
+- [ ]
 
 ## --- Day 13: Claw Contraption ---
 
 - Nice application of Cramer's rule and linear algebra to solve systems of equations
 - [x]
 - [x]
+
+## --- Day 14: Restroom Redoubt ---
+
+- Particle simulation!
+- [x]
+- [x]
+
+## --- Day 15: Warehouse Woes ---
+
+- Box-pushing simulation!
+- [x]
+- [ ]
