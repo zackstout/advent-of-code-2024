@@ -89,7 +89,7 @@ Brute force finally fails. Use frequency counts to speed up simulation
 Find areas and perimeters of regions -- tough part 2
 
 - [x] Part 1
-- [ ] Part 2
+- [x] Part 2
 
 ## --- Day 13: Claw Contraption ---
 
