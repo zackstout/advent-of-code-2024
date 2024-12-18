@@ -1,5 +1,9 @@
 # Advent of Code 2024
 
+Goal for this year: Finish every problem. No copilot. Just me writing code.
+
+(But I can peek at other people's solutions if I get really stuck. I'll learn a few things.)
+
 ## --- Day 1: Historian Hysteria ---
 
 - Sorting and frequency count
@@ -82,7 +86,7 @@
 
 ## --- Day 14: Restroom Redoubt ---
 
-- Particle simulation!
+- Particle simulation (with positions and velocity info)!
 - [x]
 - [x]
 
