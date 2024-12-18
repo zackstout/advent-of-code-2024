@@ -107,6 +107,8 @@ function runProgram(regs, prog) {
 
   const output = [];
 
+  //   Program: 2,4,1,6,7,5,4,6,1,4,5,5,0,3,3,0`;
+
   const instructions = {
     0: (combo) => {
       const div = Math.pow(2, combo);
