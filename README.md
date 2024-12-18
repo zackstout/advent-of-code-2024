@@ -91,3 +91,21 @@
 - Box-pushing simulation!
 - [x]
 - [x]
+
+## --- Day 16: Reindeer Maze ---
+
+- Tough path-finding with costs
+- [x]
+- [ ]
+
+## --- Day 17: Chronospatial Computer ---
+
+- Tough int-code style computer simulation
+- [x]
+- [ ]
+
+## --- Day 18: RAM Run ---
+
+- Fun path-finding thing
+- [x]
+- [ ]
