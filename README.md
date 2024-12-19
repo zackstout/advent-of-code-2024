@@ -135,3 +135,40 @@ Fun path-finding thing through grid of obstacles.
 
 - [x] Part 1
 - [x] Part 2
+
+## --- Day 19: Linen Layout ---
+
+DP-style problem.
+
+- [x] Part 1
+- [x] Part 2
+
+## --- Day 20 ---
+
+- [ ] Part 1
+- [ ] Part 2
+
+## --- Day 21 ---
+
+- [ ] Part 1
+- [ ] Part 2
+
+## --- Day 22 ---
+
+- [ ] Part 1
+- [ ] Part 2
+
+## --- Day 23 ---
+
+- [ ] Part 1
+- [ ] Part 2
+
+## --- Day 24 ---
+
+- [ ] Part 1
+- [ ] Part 2
+
+## --- Day 25 ---
+
+- [ ] Part 1
+- [ ] Part 2
