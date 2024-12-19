@@ -47,8 +47,7 @@ const partOne = () => {
   let [ingredients, targets] = data.split("\n\n");
   ingredients = new Set(ingredients.split(", "));
   targets = targets.split("\n");
-
-  console.log(targets.length, ingredients.size);
+  //   console.log(targets.length, ingredients.size);
 
   const maxLen = Math.max(...[...ingredients].map((x) => x.length));
 
@@ -57,21 +56,14 @@ const partOne = () => {
   //     ingredients,
   //     maxLen
   //   );
-  //   return canMake(
-  //     "bwbbrrgrrbrggubuggwgguguburbbgbgrruggugbggggb",
-  //     ingredients,
-  //     maxLen
-  //   );
 
   return targets.filter((tgt, idx) => {
     const res = canMake(tgt, ingredients, maxLen);
-    console.log("filter", idx, res);
+    // console.log("filter", idx, res);
     return res;
   }).length;
   //   return canMake("bwurrg", ingredients);
-
   //   return canMake(targets[0], ingredients);
-
   return { ingredients, targets };
 };
 
@@ -116,6 +108,11 @@ const partTwo = () => {
     return count;
   }
 
+  // wtf???? what is different here?????
+  // Ah, the fact that he is iterating through ingredients.... rather than through "cut points" in the target....
+  // huh...
+  // i almost see it..
+
   // Yup, this works
   function getNumWaysCorrect(target) {
     if (target === "") return 1;
@@ -134,31 +131,6 @@ const partTwo = () => {
     // console.log("return", target, count);
     return count;
   }
-
-  // wtf???? what is different here?????
-  // Ah, the fact that he is iterating through ingredients.... rather than through "cut points" in the target....
-  // huh...
-  // i almost see it..
-
-  //   function patternCount(design, memo) {
-  //     if (design === "") return 1;
-  //     if (memo.has(design)) {
-  //       return memo.get(design);
-  //     }
-  //     let count = 0;
-  //     for (const pattern of [...ingredients]) {
-  //       if (pattern.length > design.length) continue;
-  //       if (pattern[0] !== design[0]) continue;
-  //       if (design.startsWith(pattern)) {
-  //         const remaining = design.slice(pattern.length);
-  //         count += patternCount(remaining, memo);
-  //       }
-  //     }
-  //     memo.set(design, count);
-  //     return count;
-  //   }
-
-  //   return getNumWays("gbbr");
 
   const seenMap = new Map();
 

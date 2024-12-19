@@ -44,7 +44,7 @@ Ensure lists are in proper order.
 
 ## --- Day 6: Guard Gallivant ---
 
-Path simulation for guard.
+Path simulation for guard. Determine where to add obstacles to create a looping path for part 2.
 
 - [x] Part 1
 - [x] Part 2
@@ -65,14 +65,14 @@ Finding positions of antinodes given certain transmitting antennae positions.
 
 ## --- Day 9: Disk Fragmenter ---
 
-Compact a hard disk (simulation).
+Compact a hard disk (process simulation).
 
 - [x] Part 1
 - [x] Part 2
 
 ## --- Day 10: Hoof It ---
 
-Find valid paths from "0" to "9" in a grid of numbers (trails that only increase by 1 elevation).
+Find valid paths from "0" to "9" in a grid of numbers (trails that only increase by 1 elevation) -- use BFS.
 
 - [x] Part 1
 - [x] Part 2
@@ -124,7 +124,7 @@ Tough path-finding (through grid of obstacles) with costs.
 
 ## --- Day 17: Chronospatial Computer ---
 
-Tough int-code style computer simulation. Need to understand what the simulated program is doing.
+Tough int-code style computer simulation. Need to understand what the simulated program is doing for part 2.
 
 - [x] Part 1
 - [ ] Part 2
