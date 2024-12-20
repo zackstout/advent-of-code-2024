@@ -238,6 +238,10 @@ function getManhattanDeltas(dist) {
 // Should figure out faster way.. Maybe Dijkstra's for initial processing..
 // Another smart thing would have been to cache this data in a file once we realized it was going to take 2 minutes to process lol.
 // (and would likely be needed again)
+
+// Or....oh wow.... why didn't we just flood fill from END?.....
+// Yup. That worked instantly lol.
+
 const partTwo = () => {
   const grid = data.split("\n").map((l) => l.trim());
   const start = {};
@@ -260,14 +264,35 @@ const partTwo = () => {
 
   console.log(grid.length, grid[0].length);
 
-  for (let i = 0; i < grid.length; i++) {
-    for (let j = 0; j < grid[0].length; j++) {
-      if (grid[i][j] === "#") {
-        continue;
-      }
-      cache.set(`${i},${j}`, getFastestPath(grid, { r: i, c: j }, end));
-      console.log(i * grid[0].length + j, "of", grid.length * grid[0].length);
+  //   for (let i = 0; i < grid.length; i++) {
+  //     for (let j = 0; j < grid[0].length; j++) {
+  //       if (grid[i][j] === "#") {
+  //         continue;
+  //       }
+  //       cache.set(`${i},${j}`, getFastestPath(grid, { r: i, c: j }, end));
+  //       console.log(i * grid[0].length + j, "of", grid.length * grid[0].length);
+  //     }
+  //   }
+
+  const queue = [{ ...end, cost: 0 }];
+  while (queue.length) {
+    const { r, c, cost } = queue.shift();
+    if (r < 0 || c < 0 || r >= grid.length || c >= grid[0].length) {
+      continue;
     }
+    if (grid[r][c] === "#") {
+      continue;
+    }
+    if (cache.has(`${r},${c}`)) {
+      continue;
+    }
+
+    queue.push({ r: r + 1, c: c, cost: cost + 1 });
+    queue.push({ r: r - 1, c: c, cost: cost + 1 });
+    queue.push({ r: r, c: c + 1, cost: cost + 1 });
+    queue.push({ r: r, c: c - 1, cost: cost + 1 });
+
+    cache.set(`${r},${c}`, cost);
   }
 
   console.log("done with initial processing", cache.size);
@@ -286,6 +311,7 @@ const partTwo = () => {
       ...getManhattanDeltas(20),
     ];
 
+    // Now, all the time is taken up here. Nice. I'm sure this can be fixed as well. This takes 34s.
     neighbors.forEach((delta) => {
       //   console.log(delta);
       const d = delta.split(",").map(Number);
