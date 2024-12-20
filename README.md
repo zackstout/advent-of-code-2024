@@ -143,10 +143,12 @@ DP-style problem.
 - [x] Part 1
 - [x] Part 2
 
-## --- Day 20 ---
+## --- Day 20: Race Condition ---
 
-- [ ] Part 1
-- [ ] Part 2
+It's... another 2d grid! You can blink through walls!
+
+- [x] Part 1
+- [x] Part 2
 
 ## --- Day 21 ---
 
