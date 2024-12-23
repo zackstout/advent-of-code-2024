@@ -150,20 +150,26 @@ It's... another 2d grid! You can blink through walls!
 - [x] Part 1
 - [x] Part 2
 
-## --- Day 21 ---
+## --- Day 21: Keypad Conundrum ---
+
+Very tricky simulation/graph search problem.
 
 - [ ] Part 1
 - [ ] Part 2
 
-## --- Day 22 ---
+## --- Day 22: Monkey Market ---
 
-- [ ] Part 1
-- [ ] Part 2
+Fun and straightforward simulation.
 
-## --- Day 23 ---
+- [x] Part 1
+- [x] Part 2
 
-- [ ] Part 1
-- [ ] Part 2
+## --- Day 23: LAN Party ---
+
+Network graph problem. Use Bron-Kerbosch for part 2, to find all complete subgraphs of graph.
+
+- [x] Part 1
+- [x] Part 2
 
 ## --- Day 24 ---
 
