@@ -6,6 +6,10 @@ Goal for this year: Finish every problem. No copilot. Just me writing code.
 
 Here is the [problem set](https://adventofcode.com/2024).
 
+Total stars: 43 / 46
+
+TODO: Make table with run times for all problems. Then try to pare them down.
+
 ## --- Day 1: Historian Hysteria ---
 
 Sorting and frequency count.
@@ -38,7 +42,8 @@ Word search in grid.
 
 Ensure lists are in proper order.
 
-- Used topological sort for part two
+Used topological sort for part two
+
 - [x] Part 1
 - [x] Part 2
 
@@ -116,8 +121,9 @@ Box-pushing simulation!
 
 Tough path-finding (through grid of obstacles) with costs.
 
-- Initially tried Dijkstra but that failed (too many states)
-- Using BFS worked fine (storing path)
+Initially tried Dijkstra but that failed (too many states).
+
+Using BFS worked fine (storing path).
 
 - [x] Part 1
 - [x] Part 2
@@ -146,6 +152,8 @@ DP-style problem.
 ## --- Day 20: Race Condition ---
 
 It's... another 2d grid! You can blink through walls!
+
+Used BFS from end point to cache how quickly the end can be reached from each square.
 
 - [x] Part 1
 - [x] Part 2

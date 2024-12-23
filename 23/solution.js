@@ -111,38 +111,27 @@ const partTwo = () => {
     return intersectionSet;
   };
 
-  let times = 0;
-
   const bronKerbosch = (r, p, x) => {
-    // if (times > 2) return;
-
-    times++;
-    // if (typeof p !== "Set") {
-    //   console.log("Uh oh", p, typeof p, r, typeof r);
-    // }
-    // console.log("bk", p.size);
     if (p.size === 0 && x.size === 0) {
       //   console.log("maximal clique found", r);
       if (r.size > maxSize) {
         maxSize = r.size;
         maxClique = [...r].sort().join(",");
-        // console.l
       }
       return;
     }
-
-    // console.log(r, p, x);
 
     for (const pt of [...p]) {
       const nbrs = new Set(m.get(pt));
 
       // Oooooh funny you can't do new Set(str) because it splits it on characters.... interesting!
-      //   console.log("nbrs", pt, new Set(pt));
       bronKerbosch(
         union(r, new Set().add(pt)),
         intersects(p, nbrs),
         intersects(x, nbrs)
       );
+
+      // Recursive backtracking:
       p.delete(pt);
       x.add(pt);
     }

@@ -1,3 +1,0 @@
-// Huh... part 2 seems SO similar to part 1... really weird we only have one star here...
-
-// Again, it feels like a BFS... what is the LEAST AMOUNT of mana you can use and still win the fight?
