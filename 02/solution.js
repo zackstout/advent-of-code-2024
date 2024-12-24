@@ -43,6 +43,12 @@ const partTwo = (x) => {
 };
 // 411 is too low.. ahh probably because we skipped last element of array... Yep, nice.
 
+console.log("========");
+
+console.time("solution");
+console.log("Result: ", partOne(data));
+console.timeEnd("solution");
+
 console.time("solution");
 console.log("Result: ", partTwo(data));
 console.timeEnd("solution");

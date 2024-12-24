@@ -66,6 +66,10 @@ const partTwo = (x) => {
   return total;
 };
 
-console.time("solution");
+console.time("p1");
+console.log("Result: ", partOne(data));
+console.timeEnd("p1");
+
+console.time("p2");
 console.log("Result: ", partTwo(data));
-console.timeEnd("solution");
+console.timeEnd("p2");
