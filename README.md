@@ -6,9 +6,11 @@ Goal for this year: Finish every problem. No copilot. Just me writing code.
 
 Here is the [problem set](https://adventofcode.com/2024).
 
-Total stars: 43 / 46
+Total stars: 44 / 48
 
 TODO: Make table with run times for all problems. Then try to pare them down.
+Make a script to run each one 10x and get the average.
+Need to setup all the scripts to work correctly.
 
 ## --- Day 1: Historian Hysteria ---
 
@@ -167,7 +169,7 @@ Very tricky simulation/graph search problem.
 
 ## --- Day 22: Monkey Market ---
 
-Fun and straightforward simulation.
+Fun and straightforward simulation: track differences in a set of pseudorandom numbers.
 
 - [x] Part 1
 - [x] Part 2
@@ -179,12 +181,19 @@ Network graph problem. Use Bron-Kerbosch for part 2, to find all complete subgra
 - [x] Part 1
 - [x] Part 2
 
-## --- Day 24 ---
+## --- Day 24: Crossed Wires ---
 
-- [ ] Part 1
+Logic gate simulation.
+
+- [x] Part 1
 - [ ] Part 2
 
 ## --- Day 25 ---
 
 - [ ] Part 1
 - [ ] Part 2
+
+# Times
+
+1 13ms 30ms
+2 4ms 15ms
