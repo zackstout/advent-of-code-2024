@@ -131,8 +131,26 @@ const partOne = (input) => {
   return { m, res };
 };
 
-const partTwo = () => {};
+const partTwo = (input) => {
+  let [starts, rules] = input.split("\n\n");
+  starts = starts.split("\n").map((x) => x.trim().split(": "));
+  rules = rules.split("\n").map((l) => l.split(" -> "));
+
+  const m = new Map();
+
+  rules.forEach((r) => {
+    //   if (!m.get(r[1])) m.set(r, []);
+    const [in1, _, in2] = r[0].split(" ");
+    const out = r[1];
+    if (!m.get(in1)) m.set(in1, []);
+    if (!m.get(in2)) m.set(in2, []);
+    m.get(in1).push(out);
+    m.get(in2).push(out);
+  });
+
+  return m;
+};
 
 console.time("solution");
-console.log("Result: ", partOne(data));
+console.log("Result: ", partTwo(ex));
 console.timeEnd("solution");
