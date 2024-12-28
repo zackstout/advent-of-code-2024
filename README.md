@@ -6,7 +6,7 @@ Goal for this year: Finish every problem. No copilot. Just me writing code.
 
 Here is the [problem set](https://adventofcode.com/2024).
 
-Total stars: 44 / 48
+Total stars: 45 / 50
 
 TODO: Make table with run times for all problems. Then try to pare them down.
 Make a script to run each one 10x and get the average.
@@ -188,12 +188,9 @@ Logic gate simulation.
 - [x] Part 1
 - [ ] Part 2
 
-## --- Day 25 ---
+## --- Day 25: Code Chronicle ---
 
-- [ ] Part 1
+Keys and locks.
+
+- [x] Part 1
 - [ ] Part 2
-
-# Times
-
-1 13ms 30ms
-2 4ms 15ms
